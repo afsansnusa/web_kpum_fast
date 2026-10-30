@@ -10,7 +10,20 @@
   <body>
     <div class="navbar">
       <div class="logo">KPUM FAST 2026</div>
-      <ul class="menu">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span class="menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        Menu
+      </button>
+      <ul class="menu" id="main-menu">
         <li><a href="#home">Beranda</a></li>
         <li><a href="#struktur">Pengurus</a></li>
         <li><a href="#kontak">Kontak</a></li>
@@ -209,7 +222,7 @@
             <h3>Iqbal Fadil</h3>
             <p>Divisi Medinfo</p>
             <button
-              onclick="window.open('https://instagram.com/fadili_', '_blank')"
+              onclick="window.open('https://instagram.com/fadilif_', '_blank')"
             >
               Instagram
             </button>
@@ -256,5 +269,28 @@
     </div>
 
     <div class="footer">KPUM FAST &copy; 2026</div>
+
+    <script src="https://unpkg.com"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const navbar = document.querySelector(".navbar");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const menuLinks = document.querySelectorAll(".navbar .menu a");
+
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        navbar.classList.toggle("menu-open", !isExpanded);
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navbar.classList.remove("menu-open");
+        });
+      });
+    </script>
   </body>
 </html>
