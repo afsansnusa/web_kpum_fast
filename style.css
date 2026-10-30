@@ -2,8 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: arial, sans-serif;
 }
+
+   @font-face {
+     font-family: "Poppins";
+     src: url("./Poppins/Poppins-Regular.ttf");
+   }
+
+   body {
+     font-family: "Poppins", sans-serif;
+   }
 
 body {
   background-color: #fde3cf;
@@ -167,7 +175,7 @@ body {
 
 .beranda button {
   justify-self: start;
-  padding: 10px 40px;
+  padding: 15px 40px;
   color: white;
   background-color: #ec6426;
   border: none;
@@ -175,6 +183,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   font-size: large;
+  font-family: Poppins;
 }
 
 .beranda button:hover {
@@ -270,7 +279,7 @@ body {
   background-color: #ec6426;
   color: #fde3cf;
   border: none;
-  padding: 8px 15px;
+  padding: 12px 15px;
   border-radius: 10px;
   cursor: pointer;
   width: 100%;
