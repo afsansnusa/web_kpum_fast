@@ -7,6 +7,7 @@
 
 body {
   background-color: #fde3cf;
+  padding-top: 100px;
 }
 
 .navbar {
@@ -17,8 +18,13 @@ body {
   align-items: center;
   gap: 15px;
   border-radius: 20px;
-  margin: 20px 100px;
+  top: 20px;
+  left: 100px;
+  right: 100px;
+  margin: 0;
   flex-wrap: wrap;
+  position: fixed;
+  z-index: 1000;
 }
 
 .navbar .logo {
@@ -47,8 +53,13 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 130px;
+  }
+
   .navbar {
-    margin: 20px;
+    left: 20px;
+    right: 20px;
     flex-direction: column;
     text-align: center;
   }
@@ -60,6 +71,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 200px;
+  }
+
   .navbar ul.menu {
     flex-direction: column;
     align-items: center;
