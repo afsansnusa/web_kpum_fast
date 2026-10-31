@@ -4,14 +4,18 @@
   box-sizing: border-box;
 }
 
-   @font-face {
-     font-family: "Poppins";
-     src: url("./Poppins/Poppins-Regular.ttf");
-   }
+@font-face {
+  font-family: "Poppins";
+  src: url("./Poppins/Poppins-Regular.ttf");
+}
 
-   body {
-     font-family: "Poppins", sans-serif;
-   }
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #fde3cf;
@@ -350,5 +354,4 @@ body {
   .contact-map iframe {
     min-height: 260px;
   }
-
 }
