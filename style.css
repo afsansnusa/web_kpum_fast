@@ -281,13 +281,14 @@ body {
 
 .content button {
   background-color: #ec6426;
-  color: #fde3cf;
+  color: #ffffff;
   border: none;
   padding: 12px 15px;
   border-radius: 10px;
   cursor: pointer;
   width: 100%;
   font-weight: bold;
+  font-size: medium;
 }
 
 .card:hover {
